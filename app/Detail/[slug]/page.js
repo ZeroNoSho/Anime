@@ -47,7 +47,7 @@ export default function DetailCari({ params }) {
               ) : (
                 <Link
                   key={i}
-                  href={`http://localhost:3000/Streaming/${item.episode_endpoint}`}
+                  href={`/Streaming/${item.episode_endpoint}`}
                   className="lg:h-20 text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:font-semibold hover:border-white"
                 >
                   {item.episode_title}
@@ -57,7 +57,7 @@ export default function DetailCari({ params }) {
               <Link
                 key={i}
                 id={i}
-                href={`http://localhost:3000/Streaming/${item.episode_endpoint}`}
+                href={`/Streaming/${item.episode_endpoint}`}
                 className="lg:h-20 text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:font-semibold hover:border-white"
               >
                 {item.episode_title}

@@ -21,7 +21,7 @@ export default function Genre() {
       <div className="grid grid-cols-4 p-10 max-[765px]:grid-cols-3 max-[765px]:p-3">
         {dataz &&
           dataz.map((item, i) => (
-            <Link key={i} href={`Genre/${item.endpoint}`} className={`text-center border-2 p-5 max-[765px]:p-[10px] max-[765px]:text-xs ${i % 2 ? "bg-slate-800" : "bg-slate-900"}`}>
+            <Link key={i} href={`/Genre/${item.endpoint}`} className={`text-center border-2 p-5 max-[765px]:p-[10px] max-[765px]:text-xs ${i % 2 ? "bg-slate-800" : "bg-slate-900"}`}>
               {item.genre}
             </Link>
           ))}
