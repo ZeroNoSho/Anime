@@ -92,7 +92,7 @@ export default function DetailCari({ params }) {
               data.list_episode.map((item, i) => (
                 <Link
                   key={i}
-                  href={`http://localhost:3000/Streaming/${item.list_episode_endpoint}`}
+                  href={`/Streaming/${item.list_episode_endpoint}`}
                   className="text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:border-white"
                 >
                   {item.list_episode_title}
