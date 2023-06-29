@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../resep"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "shironime"
+  }
+}

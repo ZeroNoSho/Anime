@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+.sadsd {
+  color: #6a6a6a;
+}
+.w-inherit {
+  width: inherit;
+}
+.single-line-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.full {
+  width: 100vw !important;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-container .image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-container .image-text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.image-container .image-text3 {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 50%;
+  transform: translate(-60%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.scrollable-div {
+  max-height: 100px; /* Atur tinggi maksimal sesuai kebutuhan */
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #dddddd;
+}
+
+.scrollable-div2 {
+  max-height: 100px; /* Atur tinggi maksimal sesuai kebutuhan */
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888888 #dddddd;
+}
+
+
+/* Styling untuk Firefox */
+.scrollable-div::-webkit-scrollbar {
+  width: 6px; /* Atur lebar scrollbar sesuai kebutuhan */
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background-color: #dddddd; /* Atur warna latar belakang track scrollbar */
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Atur warna thumb scrollbar */
+}
+
+/* Styling untuk Firefox */
+.scrollable-div2::-webkit-scrollbar {
+  width: 6px; /* Atur lebar scrollbar sesuai kebutuhan */
+}
+
+.scrollable-div2::-webkit-scrollbar-track {
+  background-color: #dddddd; /* Atur warna latar belakang track scrollbar */
+}
+
+.scrollable-div2::-webkit-scrollbar-thumb {
+  background-color: #888888; /* Atur warna thumb scrollbar */
+}
