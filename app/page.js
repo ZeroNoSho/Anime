@@ -51,9 +51,9 @@ export default function Home() {
   }, []);
 
   const data = [
-    { datazs: dataz, foto: "/megumin.jpg", eps: "demount-play-sub-indo", detail: "demount-play-sub-indo", trailer: "https://www.youtube.com/watch?v=I0vXkPt_bNA" },
+    { datazs: dataz, foto: "/megumin.jpg", eps: "demount-play-sub-indo", detail: "demount-play-sub-indo", trailer: "https://www.youtube.com/embed/I0vXkPt_bNA" },
     { datazs: dataz2, foto: "/overlord.jpg", eps: "ovrdl-episode-1-sub-indo", detail: "ovrlod-sub-indo", trailer: "https://www.youtube.com/embed/ffTKNwHF70c" },
-    { datazs: dataz3, foto: "/YoujoSenki.jpg", eps: "ont-episode-1-sub-indo", detail: "oshi-noko-sub-indo", trailer: "https://www.youtube.com/watch?v=zntY4A4GPU0" },
+    { datazs: dataz3, foto: "/YoujoSenki.jpg", eps: "ont-episode-1-sub-indo", detail: "oshi-noko-sub-indo", trailer: "https://www.youtube.com/embed/zntY4A4GPU0" },
   ];
 
   return (
