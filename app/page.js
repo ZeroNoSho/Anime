@@ -33,7 +33,7 @@ export default function Home() {
         console.log(err.message);
       });
     axios
-      .get(`https://nya-otakudesu.vercel.app/api/v1/detail/youjo-senki-subtitle-indonesia`)
+      .get(`https://nya-otakudesu.vercel.app/api/v1/detail/oshi-noko-sub-indo`)
       .then((res) => {
         setDataz3(res.data.anime_detail);
       })
@@ -53,7 +53,7 @@ export default function Home() {
   const data = [
     { datazs: dataz, foto: "/megumin.jpg", eps: "demount-play-sub-indo", detail: "demount-play-sub-indo", trailer: "https://www.youtube.com/watch?v=I0vXkPt_bNA" },
     { datazs: dataz2, foto: "/overlord.jpg", eps: "ovrdl-episode-1-sub-indo", detail: "ovrlod-sub-indo", trailer: "https://www.youtube.com/embed/ffTKNwHF70c" },
-    { datazs: dataz3, foto: "/YoujoSenki.jpg", eps: "yusen-episode-1-sub-indo", detail: "youjo-senki-subtitle-indonesia", trailer: "https://www.youtube.com/embed/JwaruTPKq9I" },
+    { datazs: dataz3, foto: "/YoujoSenki.jpg", eps: "ont-episode-1-sub-indo", detail: "oshi-noko-sub-indo", trailer: "https://www.youtube.com/watch?v=zntY4A4GPU0" },
   ];
 
   return (
