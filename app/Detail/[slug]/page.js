@@ -3,6 +3,7 @@ import axios from "axios";
 import Link from "next/link";
 import Detail from "@/components/Eps/Detail";
 import { useState, useEffect } from "react";
+import Download from "@/components/Eps/Download";
 
 export default function DetailCari({ params }) {
   const [data, setData] = useState();
@@ -33,6 +34,7 @@ export default function DetailCari({ params }) {
         synopsis={data && data.anime_detail.sinopsis[0]} //2
         slug={params.slug}
       />
+      <Download slug={data && data.episode_list[0].episode_endpoint}></Download>
       <div>
         <p className="p-5">{data && data.anime_detail.title}</p>
       </div>
