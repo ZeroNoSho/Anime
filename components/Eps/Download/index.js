@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Download({ slug, hidden, responsif}) {
-  const [datazz, setDatazz] = useState();
-  const [datazz1, setDatazz1] = useState();
   const [datazz2, setDatazz2] = useState();
   const [datazz3, setDatazz3] = useState();
   const [datazz4, setDatazz4] = useState();
@@ -14,16 +12,7 @@ export default function Download({ slug, hidden, responsif}) {
 
   useEffect(() => {
     axios
-      .get(`https://otakudesu-anime-api.vercel.app/api/v1/detail/${slug}`)
-      .then((res) => {
-        setDatazz(res.data);
-        setDatazz1(res.data.episode_list[0].episode_endpoint);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
-    axios
-      .get(`https://otakudesu-anime-api.vercel.app/api/v1/batch/${datazz1}`)
+      .get(`https://otakudesu-anime-api.vercel.app/api/v1/batch/${""}`)
       .then((res) => {
         setDatazz2(res.data.batch.download_list.low_quality.download_links);
         setDatazz3(res.data.batch.download_list.medium_quality.download_links);
@@ -43,7 +32,7 @@ export default function Download({ slug, hidden, responsif}) {
 
   return (
     <div className={`${hidden} ${responsif}`}>
-      {datazz == undefined ? <p></p> : <p className="max-[765px]:text-sm">Download {datazz && datazz.episode_list[0].episode_title}</p>}
+       <p className="max-[765px]:text-sm">Download {}</p>
       <div className="flex pt-10 gap-5 justify-around">
         <div className={`basis-1/4 text-center bg-slate-800 cursor-pointer ${datazz5 == 1 ? "" : "h-fit"}`}>
           <p className="text-base p-2 max-[765px]:text-sm max-[765px]:p-1" onClick={()=>{datazz5 == 1 ? setDatazz5(0) : setDatazz5(1)}}>360p</p>

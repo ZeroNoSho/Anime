@@ -10,13 +10,19 @@ export default function DetailCari({ params }) {
   const [datamiror, setDatamiror] = useState();
   const [datamiror2, setDatamiror2] = useState();
   const [datamiror3, setDatamiror3] = useState();
-  const [count, setCount] = useState(0);
+  const [datamiror4, setDatamiror4] = useState();
+  const [datamiror5, setDatamiror5] = useState();
+  const [datazz, setDatazz] = useState("mirror_embed3");
+  const [datazz5, setDatazz5] = useState(0);
+  const [count, setCount] = useState();
 
   useEffect(() => {
     axios
       .get(`https://nya-otakudesu.vercel.app/api/v1/episode/${params.slug}`)
       .then((res) => {
         setData(res.data);
+        setDatamiror4(res.data.mirror_embed1.straming);
+        setDatamiror5(res.data.mirror_embed2.straming);
         setDatamiror(res.data.mirror_embed3.straming);
         const mega = datamiror.find((ex) => ex.driver == "mega ");
         setDatamiror3(mega.link);
@@ -50,8 +56,18 @@ export default function DetailCari({ params }) {
 
   const OnclikEps = (e) => {
     const val = e.target.dataset.val;
-    const mega = datamiror.find((ex) => ex.driver == val);
-    setDatamiror2(mega.link);
+    if (datazz == "mirror_embed1") {
+      const mega = datamiror4.find((ex) => ex.driver == val);
+      setDatamiror2(mega.link);
+    }
+    if (datazz == "mirror_embed2") {
+      const mega = datamiror5.find((ex) => ex.driver == val);
+      setDatamiror2(mega.link);
+    }
+    if (datazz == "mirror_embed3") {
+      const mega = datamiror.find((ex) => ex.driver == val);
+      setDatamiror2(mega.link);
+    }
   };
 
   return (
@@ -75,14 +91,65 @@ export default function DetailCari({ params }) {
               ></iframe>
             )}
           </div>
-          <p className="text-center lg:hidden">Miror :</p>
-          <div className="flex justify-between gap-5 scrollable-div2 max-[765px]:pt-5 md:pt-5">
-            {datamiror &&
-              datamiror.map((item, i) => (
-                <div key={i} data-val={item.driver} onClick={OnclikEps} className="text-base w-40 text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:font-semibold hover:border-white">
-                  <p data-val={item.driver}>{item.driver}</p>
-                </div>
-              ))}
+          <p className="text-center lg:hidden pb-5">Miror :</p>
+          <div className="grid grid-cols-3 text-center">
+            <div>
+              <p
+                className="bg-slate-700 border cursor-pointer"
+                onClick={() => {
+                  datazz5 == 1 ? setDatazz5(0) : setDatazz5(1);
+                  setDatazz("mirror_embed1");
+                }}
+              >
+                360p
+              </p>
+              <div className={`${datazz5 == 1 ? " block " : "hidden"}`}>
+                {datamiror4 &&
+                  datamiror4.map((item, i) => (
+                    <div key={i} onClick={OnclikEps} data-val={item.driver} className={`${i % 2 ? "bg-slate-800" : "bg-slate-900"} cursor-pointer`}>
+                      <p data-val={item.driver}>{item.driver}</p>
+                    </div>
+                  ))}
+              </div>
+            </div>
+            <div>
+              <p
+                className="bg-slate-700 border cursor-pointer"
+                onClick={() => {
+                  datazz5 == 2 ? setDatazz5(0) : setDatazz5(2);
+                  setDatazz("mirror_embed2");
+                }}
+              >
+                480p
+              </p>
+              <div className={`${datazz5 == 2 ? " block " : "hidden"}`}>
+                {datamiror5 &&
+                  datamiror5.map((item, i) => (
+                    <div key={i} data-val={item.driver} onClick={OnclikEps} className={`${i % 2 ? "bg-slate-800" : "bg-slate-900"} cursor-pointer`}>
+                      <p data-val={item.driver}>{item.driver}</p>
+                    </div>
+                  ))}
+              </div>
+            </div>
+            <div>
+              <p
+                className="bg-slate-700 border cursor-pointer"
+                onClick={() => {
+                  datazz5 == 3 ? setDatazz5(0) : setDatazz5(3);
+                  setDatazz("mirror_embed3");
+                }}
+              >
+                720p
+              </p>
+              <div className={`${datazz5 == 3 ? " block " : "hidden"}`}>
+                {datamiror &&
+                  datamiror.map((item, i) => (
+                    <div key={i} data-val={item.driver} onClick={OnclikEps} className={`${i % 2 ? "bg-slate-800" : "bg-slate-900"} cursor-pointer`}>
+                      <p data-val={item.driver}>{item.driver}</p>
+                    </div>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
         <div className="max-[765px]:pt-10 md:pt-5 mx-auto">
@@ -90,12 +157,8 @@ export default function DetailCari({ params }) {
           <div className="grid grid-cols-4 p-5 gap-3 w-fit max-[765px]:m-auto max-[765px]:grid-cols-3 md:m-auto lg:mx-auto">
             {data &&
               data.list_episode.map((item, i) => (
-                <Link
-                  key={i}
-                  href={`/Streaming/${item.list_episode_endpoint}`}
-                  className="text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:border-white"
-                >
-                  {item.list_episode_title}
+                <Link key={i} href={`/Streaming/${item.list_episode_endpoint}`} className="text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:border-white w-20 h-auto">
+                  {i + 1}
                 </Link>
               ))}
           </div>
