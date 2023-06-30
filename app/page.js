@@ -51,9 +51,9 @@ export default function Home() {
   }, []);
 
   const data = [
-    { datazs: dataz, foto: "/megumin.jpg", sipnopsis: "", trailer: "https://www.youtube.com/embed/h4dX58X6ln4" },
-    { datazs: dataz2, foto: "/overlord.jpg", sipnopsis: "", trailer: "https://www.youtube.com/embed/ffTKNwHF70c" },
-    { datazs: dataz3, foto: "/YoujoSenki.jpg", sipnopsis: "", trailer: "https://www.youtube.com/embed/JwaruTPKq9I" },
+    { datazs: dataz, foto: "/megumin.jpg", eps: "knsb-episode-1-sub-indo", detail: "konoba-subtitle-indonesia", trailer: "https://www.youtube.com/embed/h4dX58X6ln4" },
+    { datazs: dataz2, foto: "/overlord.jpg", eps: "ovrdl-episode-1-sub-indo", detail: "ovrlod-sub-indo", trailer: "https://www.youtube.com/embed/ffTKNwHF70c" },
+    { datazs: dataz3, foto: "/YoujoSenki.jpg", eps: "yusen-episode-1-sub-indo", detail: "youjo-senki-subtitle-indonesia", trailer: "https://www.youtube.com/embed/JwaruTPKq9I" },
   ];
 
   return (
@@ -105,13 +105,13 @@ export default function Home() {
               </p>
             </div>
             <div className="flex pt-[50px]">
-              <Link href="/">
+              <Link href={`/Streaming/${data[count].eps}`}>
                 <div className="px-5 py-3 bg-[#000000ce]">
                   <FontAwesomeIcon className="pr-3" icon={faPlay} />
                   Play Now
                 </div>
               </Link>
-              <Link href="/">
+              <Link href={`/Detail/${data[count].detail}`}>
                 <div className="px-5 py-3">More Detail</div>
               </Link>
             </div>
