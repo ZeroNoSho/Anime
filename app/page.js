@@ -63,7 +63,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-[#484848b5] to-[#00000058] h-[700px] px-10 lg:py-[80px] md:py-[40px] max-[765px]:px-5 max-[765px]:py-[80px] max-[765px]:h-full">
             <div className=" w-[250px] bg-gradient-to-r from-[#000000b5] to-[#00000058] h-20 max-[765px]:hidden">
               <div className=" w-[4px] bg-[#000000] h-20">
-                <h3 className="p-color-style py-7 px-5 ui-font-serif font-semibold text-xl md:px-2">
+                <h3 className="text-white p-color-style py-7 px-5 ui-font-serif font-semibold text-xl md:px-2">
                   <Link href="/">
                     <span className="pr-2">S</span>
                     <span className="pr-2">H</span>
@@ -95,7 +95,7 @@ export default function Home() {
                   allowFullScreen
                 ></iframe>
               </div>
-              <p className="pt-10 max-[765px]:text-sm text-justify">
+              <p className="pt-10 max-[765px]:text-sm text-justify text-white">
                 {data[0].datazs && data[count].datazs.sinopsis[0]}
                 <br />
                 <br />
@@ -106,13 +106,13 @@ export default function Home() {
             </div>
             <div className="flex pt-[50px]">
               <Link href={`/Streaming/${data[count].eps}`}>
-                <div className="px-5 py-3 bg-[#000000ce]">
+                <div className="px-5 py-3 bg-[#000000ce] text-white">
                   <FontAwesomeIcon className="pr-3" icon={faPlay} />
                   Play Now
                 </div>
               </Link>
               <Link href={`/Detail/${data[count].detail}`}>
-                <div className="px-5 py-3">More Detail</div>
+                <div className="px-5 py-3 text-white">More Detail</div>
               </Link>
             </div>
           </div>
