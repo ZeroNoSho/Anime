@@ -42,7 +42,7 @@ export default function Nav() {
                 <Link href="/List">Anime List</Link>
               </li>
               <li className="text-slate-400 py-3 px-5 ui-font-serif font-medium text-base tracking-widest hover:text-white lg:px-3">
-                <Link href="/On-going">On-going</Link>
+                <Link href="/On-going">Ongoing</Link>
               </li>
               <li className="text-slate-400 py-3 px-5 ui-font-serif font-medium text-base tracking-widest hover:text-white lg:px-3">
                 <Link href="/Completed">Completed</Link>
