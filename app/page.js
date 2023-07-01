@@ -80,7 +80,7 @@ export default function Home() {
                 </h3>
               </div>
             </div>
-            <div>
+            <div className="lg:h-[380px]">
               <h1 className="lg:text-5xl pt-10 max-[765px]:text-2xl max-[765px]:pt-0 md:text-2xl">{data[0].datazs && data[count].datazs.title}</h1>
               <h1 className="text-xl max-[765px]:text-lg">{data[0].datazs && data[count].datazs.detail[1]}</h1>
               <div className="md:hidden lg:hidden max-[765px]:pt-10">
