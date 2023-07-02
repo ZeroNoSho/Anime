@@ -158,7 +158,7 @@ export default function DetailCari({ params }) {
             {data &&
               data.list_episode.map((item, i) => (
                 <Link key={i} href={`/Streaming/${item.list_episode_endpoint}`} className="text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:border-white w-20 h-auto">
-                  {i + 1}
+                  {data && data.list_episode.length - i + 1}
                 </Link>
               ))}
           </div>
