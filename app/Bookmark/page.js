@@ -36,7 +36,7 @@ export default function Bookmark() {
       <div className="max-[765px]:flex max-[765px]:p-5 max-[765px]:gap-2 max-[765px]:justify-between">
         <p className="font-bold text-center text-3xl p-10 max-[765px]:p-0 max-[765px]:text-xl">BookMark</p>
         <p className="font-bold text-right px-10 cursor-pointer max-[765px]:px-0" onClick={() => (del == 0 ? setDel(1) : setDel(0))}>
-          <span className="bg-gray-800 py-2 px-10 rounded-lg hover:bg-gray-700 max-[765px]:px-5 max-[765px]:text-sm">Hapus</span>
+          <span className="bg-violet-200 py-2 px-10 rounded-lg hover:bg-violet-100 max-[765px]:px-5 max-[765px]:text-sm">Hapus</span>
         </p>
       </div>
       <div className="grid gap-10 p-10 lg:grid-cols-5 md:grid-cols-3 max-[765px]:grid-cols-2 max-[765px]:p-2">

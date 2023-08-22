@@ -25,10 +25,10 @@ export default function Download({ slug }) {
   }, [slug]);
 
   return (
-    <div className={`${datazz1 == "" ? "hidden" : ""} px-5 pb-10`}>
+    <div className={`${datazz1 == "" ? "hidden" : ""} pb-10`}>
       <p className="max-[765px]:text-sm">Download {datazz1 && datazz1}</p>
       <div className="flex grid grid-cols-3 mx-auto justify-around">
-        <div className={`basis-1/4 text-center bg-slate-800 cursor-pointer ${datazz5 == 1 ? "" : "h-fit"}`}>
+        <div className={`basis-1/4 text-center bg-violet-200 cursor-pointer ${datazz5 == 1 ? "" : "h-fit"}`}>
           <p
             className="text-base p-2 max-[765px]:text-sm max-[765px]:p-1"
             onClick={() => {
@@ -39,12 +39,12 @@ export default function Download({ slug }) {
           </p>
           {datazz2 &&
             datazz2.map((item, i) => (
-              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-slate-800" : "bg-slate-900"} ${datazz5 == 1 ? "" : "hidden"}`}>
+              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-violet-200" : "bg-violet-100"} ${datazz5 == 1 ? "" : "hidden"}`}>
                 <Link href={item.link}>{item.host}</Link>
               </div>
             ))}
         </div>
-        <div className={`basis-1/4 text-center bg-slate-900 cursor-pointer ${datazz5 == 2 ? "" : "h-fit"}`}>
+        <div className={`basis-1/4 text-center bg-violet-100 cursor-pointer ${datazz5 == 2 ? "" : "h-fit"}`}>
           <p
             className="text-base p-2 max-[765px]:text-sm max-[765px]:p-1"
             onClick={() => {
@@ -55,12 +55,12 @@ export default function Download({ slug }) {
           </p>
           {datazz3 &&
             datazz3.map((item, i) => (
-              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-slate-900" : "bg-slate-800"} ${datazz5 == 2 ? "" : "hidden"}`}>
+              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-violet-100" : "bg-violet-200"} ${datazz5 == 2 ? "" : "hidden"}`}>
                 <Link href={item.link}>{item.host}</Link>
               </div>
             ))}
         </div>
-        <div className={`basis-1/4 text-center bg-slate-800 cursor-pointer ${datazz5 == 3 ? "" : "h-fit"}`}>
+        <div className={`basis-1/4 text-center bg-violet-200 cursor-pointer ${datazz5 == 3 ? "" : "h-fit"}`}>
           <p
             className="text-base p-2 max-[765px]:text-sm max-[765px]:p-1"
             onClick={() => {
@@ -71,7 +71,7 @@ export default function Download({ slug }) {
           </p>
           {datazz4 &&
             datazz4.map((item, i) => (
-              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-slate-800" : "bg-slate-900"}  ${datazz5 == 3 ? "" : "hidden"}`}>
+              <div key={i} className={`py-2 text-xs ${i % 2 ? "bg-violet-200" : "bg-violet-100"}  ${datazz5 == 3 ? "" : "hidden"}`}>
                 <Link className="" href={item.link}>
                   {item.host}
                 </Link>

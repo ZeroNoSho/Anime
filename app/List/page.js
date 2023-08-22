@@ -18,7 +18,7 @@ export default function List() {
 
   return (
     <div>
-      <div className="pt-20 grid grid-cols-2">
+      <div className="py-28 grid grid-cols-2">
         <Listanime daftarFilms={dataz && dataz} hurufDepans={"#"}></Listanime>
         <Listanime daftarFilms={dataz && dataz} hurufDepans={"A"}></Listanime>
         <Listanime daftarFilms={dataz && dataz} hurufDepans={"B"}></Listanime>

@@ -25,9 +25,9 @@ export default function Listanime({ hurufDepans, daftarFilms }) {
   const filmHurufADepan = pilahFilm(daftarFilms, hurufDepans);
 
   return (
-    <div className={`text-center bg-slate-700  ${datazz5 == hurufDepans ? " h-full " : "h-fit"}`}>
+    <div className={`text-center ${datazz5 == hurufDepans ? " h-full " : "h-fit"}`}>
       <p
-        className="bg-slate-500 border-2 cursor-pointer"
+        className="bg-violet-200 border-2 cursor-pointer"
         onClick={() => {
           datazz5 == hurufDepans ? setDatazz5("") : setDatazz5(hurufDepans);
         }}
@@ -37,7 +37,7 @@ export default function Listanime({ hurufDepans, daftarFilms }) {
       <div className={`${datazz5 == hurufDepans ? "" : "hidden"}`}>
         {filmHurufADepan &&
           filmHurufADepan.map((item, i) => (
-            <div key={hurufDepans + i} className={`py-2 text-xs border ${i % 2 ? "bg-slate-800" : "bg-slate-900"}`}>
+            <div key={hurufDepans + i} className={`py-2 text-xs border ${i % 2 ? "bg-violet-100" : "bg-violet-200"}`}>
               <Link href={`/Detail/${item.endpoint}`}>{item.title}</Link>
             </div>
           ))}

@@ -20,7 +20,7 @@ export default function DetailCari({ params }) {
   }, [params]);
 
   return (
-    <div className="pt-20 px-10 text-xl max-[765px]:px-3">
+    <div className="py-20 px-10 text-xl max-[765px]:px-3">
       <Detail
         status={data && data.anime_detail.detail[5]} //6
         episode_count={data && data.anime_detail.detail[6]}
@@ -35,10 +35,8 @@ export default function DetailCari({ params }) {
         slug={params.slug}
       />
       <Download slug={data && data.episode_list[0].episode_endpoint}></Download>
-      <div>
-        <p className="p-5">{data && data.anime_detail.title}</p>
-      </div>
-      <div className="grid grid-cols-4 p-5 gap-3 w-fit max-[765px]:m-auto max-[765px]:grid-cols-2 md:m-auto lg:mx-auto">
+      <p>{data && data.anime_detail.title}</p>
+      <div className="grid grid-cols-4 py-5 gap-5 w-fit max-[765px]:m-auto max-[765px]:grid-cols-2">
         {data &&
           data.episode_list.map((item, i) =>
             data && data.anime_detail.detail[5] == "Status: Completed" ? (
@@ -50,7 +48,7 @@ export default function DetailCari({ params }) {
                 <Link
                   key={i}
                   href={`/Streaming/${item.episode_endpoint}`}
-                  className="lg:h-20 text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:font-semibold hover:border-white"
+                  className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
                 >
                   {item.episode_title}
                 </Link>
@@ -60,7 +58,7 @@ export default function DetailCari({ params }) {
                 key={i}
                 id={i}
                 href={`/Streaming/${item.episode_endpoint}`}
-                className="lg:h-20 text-base text-center p-3 rounded-xl border-slate-400 text-slate-400 border-2 cursor-pointer hover:text-white hover:font-semibold hover:border-white"
+                className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
               >
                 {item.episode_title}
               </Link>

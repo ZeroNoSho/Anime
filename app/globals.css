@@ -17,8 +17,9 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  color: #4a4a4a;
+  background-color: whitesmoke;
 }
 .sadsd {
   color: #6a6a6a;
@@ -92,7 +93,6 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #888888 #dddddd;
 }
-
 
 /* Styling untuk Firefox */
 .scrollable-div::-webkit-scrollbar {

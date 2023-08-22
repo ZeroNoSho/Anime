@@ -19,7 +19,7 @@ export default function SearchDeyail({ params }) {
       });
   }, []);
   return (
-    <div className="pt-20">
+    <div className="py-10">
       <p className="p-10 tracking-[.25em] text-xl font-bold max-[765px]:p-3 max-[765px]:text-lg"> 
         Hasil Pencarian ({dataz && dataz.length}) <FontAwesomeIcon icon={faMagnifyingGlass} />
       </p>

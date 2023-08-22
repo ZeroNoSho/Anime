@@ -46,7 +46,7 @@ export default function Detail({ API, studio, img, episode_count, japanese_title
   };
 
   return (
-    <div className="flex pt-20 pb-10 max-[765px]:block max-[765px]:pt-0 max-[765px]:pb-[70px]">
+    <div className="flex pt-10 pb-10 max-[765px]:block max-[765px]:pt-0 max-[765px]:pb-[70px]">
       <Image className="m-auto pb-5" width={300} height={150} src={img || "/asda1.png"} alt="anime" />
       <div className="px-10 w-screen max-[765px]:px-[20px] max-[765px]:w-auto">
         <div className="flex justify-between max-[765px]:">
@@ -58,8 +58,8 @@ export default function Detail({ API, studio, img, episode_count, japanese_title
             </span>
           </h1>
           <p
-            className={`text-[40px] text-slate-400 rounded-sm ui-font-serif p-color-style hover:text-yellow-200 md:px-2 max-[765px]:text-[40px] max-[765px]:text-center max-[765px]:m-auto ${
-              fav1 && fav1.dis == true ? "text-yellow-200" : ""
+            className={`text-[40px] rounded-sm ui-font-serif p-color-style hover:text-violet-400 md:px-2 max-[765px]:text-[40px] max-[765px]:text-center max-[765px]:m-auto ${
+              fav1 && fav1.dis == true ? "text-violet-400" : "text-violet-200"
             }`}
             onClick={clickDefault}
           >

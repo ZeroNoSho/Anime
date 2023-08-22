@@ -21,11 +21,11 @@ export default function GendreDetails({ params }) {
       });
   }, [dataz1]);
   return (
-    <div className="pt-20">
+    <div className="pt-20 pb-10">
       <div className="grid p-10 lg:grid-cols-3 md:grid-cols-2 md:p-2 max-[765px]:p-0 max-[765px]:grid-cols-1">
         {dataz &&
           dataz.map((item, i) => (
-            <div key={i} className={`text-center border-2 p-5 flex ${i % 2 ? "bg-slate-800" : "bg-slate-900"}`}>
+            <div key={i} className={`text-center border-2 p-5 flex ${i % 2 ? "bg-violet-200" : "bg-violet-100"}`}>
               <Image className="max-[765px]:h-40 max-[765px]:w-40" width={150} height={100} src={item.thumb} alt="anime"></Image>
               <div>
                 <Link className="text-lg" href={`/Detail/${item.link}`}>
@@ -44,7 +44,7 @@ export default function GendreDetails({ params }) {
             </div>
           ))}
       </div>
-      <div className="flex px-10 text-center pt-3 ">
+      <div className="flex px-10 text-center pt-10 ">
         <p
           className="previous basis-1/2 cursor-pointer"
           onClick={() => {
