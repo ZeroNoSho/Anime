@@ -2,7 +2,7 @@
 
 module.exports = {
   images: {
-    domains: ["otakudesu.lol", "media.kitsu.io"],
+    domains: ["otakudesu.lol", "media.kitsu.io", "otakudesu.wiki"],
   },
   devIndicators: {
     buildActivity: true,
