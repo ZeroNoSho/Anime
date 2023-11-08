@@ -10,7 +10,9 @@ export default function DetailCari({ params }) {
 
   useEffect(() => {
     axios
-      .get(`https://otakudesu-anime-api.vercel.app/api/v1/detail/${params.slug}`)
+      .get(
+        `https://otakudesu-anime-api.vercel.app/api/v1/detail/${params.slug}`
+      )
       .then((res) => {
         setData(res.data);
       })
@@ -47,7 +49,9 @@ export default function DetailCari({ params }) {
               ) : (
                 <Link
                   key={i}
-                  href={`/Streaming/${item.episode_endpoint}`}
+                  href={`/Streaming/${item.episode_endpoint
+                    .replace("https:/otakudesu.cam/anime/", "")
+                    .replace("/", "")}`}
                   className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
                 >
                   {item.episode_title}
@@ -57,7 +61,9 @@ export default function DetailCari({ params }) {
               <Link
                 key={i}
                 id={i}
-                href={`/Streaming/${item.episode_endpoint}`}
+                href={`/Streaming/${item.episode_endpoint
+                  .replace("https:/otakudesu.cam/anime/", "")
+                  .replace("/", "")}`}
                 className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
               >
                 {item.episode_title}
