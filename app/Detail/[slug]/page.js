@@ -50,7 +50,7 @@ export default function DetailCari({ params }) {
                 <Link
                   key={i}
                   href={`/Streaming/${item.episode_endpoint
-                    .replace("https:/otakudesu.cam/anime/", "")
+                    .replace("https:/otakudesu.cam/episode/", "")
                     .replace("/", "")}`}
                   className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
                 >
@@ -62,7 +62,7 @@ export default function DetailCari({ params }) {
                 key={i}
                 id={i}
                 href={`/Streaming/${item.episode_endpoint
-                  .replace("https:/otakudesu.cam/anime/", "")
+                  .replace("https:/otakudesu.cam/episode/", "")
                   .replace("/", "")}`}
                 className="lg:h-20 text-base text-center p-3 rounded-xl border-violet-200 border-2 cursor-pointer hover:font-semibold hover:border-violet-400"
               >
