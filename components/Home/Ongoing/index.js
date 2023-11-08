@@ -28,8 +28,20 @@ export default function ListanimeHome({ judul, API, Tinggi, ketuk }) {
           data2.ongoing.map(
             (item, i) =>
               i < 24 && (
-                <Link key={i} href={`/Detail/${item.endpoint}`} className="image-container w-4/4 hover:text-xl hover:font-semibold">
-                  <Image width={300} height={150} src={item.thumb} alt="anime" className=" brightness-50 blur-[1px] hover:filter-none w-full m-auto rounded-md" />
+                <Link
+                  key={i}
+                  href={`/Detail/${item.endpoint
+                    .replace("https:/otakudesu.cam/anime/", "")
+                    .replace("/", "")}`}
+                  className="image-container w-4/4 hover:text-xl hover:font-semibold"
+                >
+                  <Image
+                    width={300}
+                    height={150}
+                    src={item.thumb}
+                    alt="anime"
+                    className=" brightness-50 blur-[1px] hover:filter-none w-full m-auto rounded-md"
+                  />
                   <div className="image-text2 hover:text-gray-400 cursor-pointer">
                     <p> {item.title}</p>
                   </div>
